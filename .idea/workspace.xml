@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="gerenciador:war" />
       <artifact name="gerenciador:war exploded" />
     </artifacts-to-build>
   </component>
@@ -9,35 +10,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10b75583-465e-436f-9124-7af8810b41c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/HelloServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/Prueba.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/dao/EmpresaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/factory/FactoryEmpresa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/modelo/EmpresaEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/HolaMundoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/ListaEmpresasServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/NuevaEmpresaServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/formNuevaEmpresa.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/listaEmpresas.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/nuevaEmpresaRegistrada.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/welcome.html" afterDir="false" />
+    <list default="true" id="10b75583-465e-436f-9124-7af8810b41c2" name="Changes" comment="agregando datos al modelo, modificando los servlet para redireccionar a otros servlet,">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/Prueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/Prueba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/modelo/EmpresaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/modelo/EmpresaEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/ListaEmpresasServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/ListaEmpresasServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/NuevaEmpresaServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/NuevaEmpresaServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/listaEmpresas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listaEmpresas.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,11 +217,36 @@
       <workItem from="1681757125576" duration="5779000" />
       <workItem from="1681836989924" duration="2395000" />
       <workItem from="1681855788767" duration="6849000" />
-      <workItem from="1681931642040" duration="5815000" />
+      <workItem from="1681931642040" duration="7202000" />
+      <workItem from="1682025683920" duration="3268000" />
     </task>
+    <task id="LOCAL-00001" summary="Agregando jstl a los html">
+      <created>1681952757978</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681952757978</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Agregando jstl a los html" />
+    <MESSAGE value="agregando datos al modelo, modificando los servlet para redireccionar a otros servlet," />
+    <option name="LAST_COMMIT_MESSAGE" value="agregando datos al modelo, modificando los servlet para redireccionar a otros servlet," />
   </component>
 </project>

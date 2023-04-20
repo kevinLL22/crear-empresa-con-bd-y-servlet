@@ -11,9 +11,9 @@ public class Prueba {
 
         EntityManager em = FactoryEmpresa.entityManager();
         EmpresaDao empresaDao = new EmpresaDao(em);
-        EmpresaEntity empresaEntity = new EmpresaEntity("otra tienda");
+        //EmpresaEntity empresaEntity = new EmpresaEntity("otra tienda");
 
-        empresaDao.save(empresaEntity);
+        //empresaDao.save(empresaEntity);
         em.close();
 
     }

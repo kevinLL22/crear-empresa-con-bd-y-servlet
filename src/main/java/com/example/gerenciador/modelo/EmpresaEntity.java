@@ -1,6 +1,7 @@
 package com.example.gerenciador.modelo;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
@@ -10,12 +11,14 @@ public class EmpresaEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
     String nombre;
+    Date fechaAbertura;
 
     public EmpresaEntity() {
     }
 
     public EmpresaEntity(String nombre) {
         this.nombre = nombre;
+        this.fechaAbertura = new Date();
     }
 
     public Integer getId() {
@@ -32,6 +35,14 @@ public class EmpresaEntity {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public Date getFechaAbertura() {
+        return fechaAbertura;
+    }
+
+    public void setFechaAbertura(Date fechaAbertura) {
+        this.fechaAbertura = fechaAbertura;
     }
 
     @Override

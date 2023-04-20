@@ -32,9 +32,12 @@ public class NuevaEmpresaServlet extends HttpServlet {
         empresaDao.save(empresa);
         em.close();
 
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/nuevaEmpresaRegistrada.jsp");
+        //Al contrario que con el dispacher, ahora le decimos al navegador que vaya a esta otra dirección
+        resp.sendRedirect("ListaEmpresasServlet");
+
+        /* RequestDispatcher requestDispatcher = req.getRequestDispatcher("/ListaEmpresasServlet");
         req.setAttribute("nombre",empresa.getNombre());
-        requestDispatcher.forward(req,resp);
+        requestDispatcher.forward(req,resp); */
 
     }
 }
