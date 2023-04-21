@@ -14,7 +14,7 @@ public class EmpresaDao {
     public EmpresaDao(EntityManager em) {
         this.em = em;
     }
-    public EmpresaEntity findById(long id){
+    public EmpresaEntity findById(Integer id){
         try{ // pensé en hacer uso del try with resources, pero esto cerraría el em, no la transacción
             em.getTransaction().begin();
             EmpresaEntity empresa = em.find(EmpresaEntity.class, id);
@@ -64,6 +64,7 @@ public class EmpresaDao {
     public void delete(EmpresaEntity empresa){
         try {
             em.getTransaction().begin();
+            //remove recibe entidades, no ids
             em.remove(empresa);
             em.getTransaction().commit();
         }catch (RuntimeException e){

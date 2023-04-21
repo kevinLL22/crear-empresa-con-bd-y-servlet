@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<c:url value="/eliminarEmpresa" var="eliminarEmpresa"/>
 
 <html>
 <head>
@@ -16,7 +17,11 @@
     <h1>Lista de empresas</h1>
     <ul>
         <c:forEach items="${empresasList}" var="empresa">
-            <li> ${empresa.nombre} - <fmt:formatDate value="${empresa.fechaAbertura}" pattern="dd/MM/YYYY"/> </li>
+            <li> ${empresa.nombre} - <fmt:formatDate value="${empresa.fechaAbertura}" pattern="dd/MM/YYYY"/>
+                    <form action="${eliminarEmpresa}" method="POST">
+                        <input type="hidden" name="idEmpresaEliminar" value="${empresa.id}">
+                        <button type="submit">Eliminar</button>
+                    </form>
         </c:forEach>
 
     </ul>

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="gerenciador:war" />
       <artifact name="gerenciador:war exploded" />
     </artifacts-to-build>
   </component>
@@ -11,11 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10b75583-465e-436f-9124-7af8810b41c2" name="Changes" comment="agregando datos al modelo, modificando los servlet para redireccionar a otros servlet,">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/EliminarEmpresaServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/Prueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/Prueba.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/modelo/EmpresaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/modelo/EmpresaEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/ListaEmpresasServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/ListaEmpresasServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/NuevaEmpresaServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/NuevaEmpresaServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/dao/EmpresaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/dao/EmpresaDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/listaEmpresas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listaEmpresas.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,9 +24,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Tag Library Descriptor" />
-        <option value="Class" />
         <option value="HTML File" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -218,7 +215,7 @@
       <workItem from="1681836989924" duration="2395000" />
       <workItem from="1681855788767" duration="6849000" />
       <workItem from="1681931642040" duration="7202000" />
-      <workItem from="1682025683920" duration="3268000" />
+      <workItem from="1682025683920" duration="6953000" />
     </task>
     <task id="LOCAL-00001" summary="Agregando jstl a los html">
       <created>1681952757978</created>
@@ -227,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681952757978</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="agregando datos al modelo, modificando los servlet para redireccionar a otros servlet,">
+      <created>1682032202033</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682032202033</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
