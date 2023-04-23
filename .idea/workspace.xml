@@ -3,22 +3,15 @@
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="gerenciador:war" />
-      <artifact name="gerenciador:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10b75583-465e-436f-9124-7af8810b41c2" name="Changes" comment="agregando logica eliminar, se modifico html, dao y se agrego nuevo servlet para eliminar">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/BuscarEmpresaServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/ModificarEmpresaServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/modificarEmpresa.jsp" afterDir="false" />
+    <list default="true" id="10b75583-465e-436f-9124-7af8810b41c2" name="Changes" comment="agregando logica actualizar. se creo nuevo servlet y html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/Prueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/Prueba.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/dao/EmpresaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/dao/EmpresaDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/formNuevaEmpresa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/formNuevaEmpresa.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/listaEmpresas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/listaEmpresas.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/modificarEmpresa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/modificarEmpresa.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,26 +54,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/banll/Documents/udemy/1846-Java-y-JDBC-Trabajando-con-una-Base-de-Datos-aula-2-views&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/banll/Documents/udemy/1846-Java-y-JDBC-Trabajando-con-una-Base-de-Datos-aula-2-views",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.gerenciador.servlet" />
@@ -225,7 +223,8 @@
       <workItem from="1681931642040" duration="7202000" />
       <workItem from="1682025683920" duration="7967000" />
       <workItem from="1682047273231" duration="7983000" />
-      <workItem from="1682100544398" duration="600000" />
+      <workItem from="1682100544398" duration="4178000" />
+      <workItem from="1682278375077" duration="4948000" />
     </task>
     <task id="LOCAL-00001" summary="Agregando jstl a los html">
       <created>1681952757978</created>
@@ -248,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682037063854</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="agregando logica actualizar. se creo nuevo servlet y html">
+      <created>1682103505015</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682103505015</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +275,7 @@
     <MESSAGE value="Agregando jstl a los html" />
     <MESSAGE value="agregando datos al modelo, modificando los servlet para redireccionar a otros servlet," />
     <MESSAGE value="agregando logica eliminar, se modifico html, dao y se agrego nuevo servlet para eliminar" />
-    <option name="LAST_COMMIT_MESSAGE" value="agregando logica eliminar, se modifico html, dao y se agrego nuevo servlet para eliminar" />
+    <MESSAGE value="agregando logica actualizar. se creo nuevo servlet y html" />
+    <option name="LAST_COMMIT_MESSAGE" value="agregando logica actualizar. se creo nuevo servlet y html" />
   </component>
 </project>

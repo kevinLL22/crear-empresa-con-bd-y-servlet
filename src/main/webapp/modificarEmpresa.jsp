@@ -8,7 +8,6 @@
     <title>Modificar empresa</title>
 </head>
 <body>
-<body>
 
   <form action="${modEmpresa}" method="post">
     modificar empresa:
@@ -18,6 +17,5 @@
     <input type="submit"/>
   </form>
 
-</body>
 </body>
 </html>

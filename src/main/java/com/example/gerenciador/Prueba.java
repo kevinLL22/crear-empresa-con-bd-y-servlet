@@ -12,7 +12,6 @@ import java.util.Date;
 public class Prueba {
     public static void main(String[] args) {
 
-        pruebaUpdate();
 
     }
 
@@ -38,8 +37,7 @@ public class Prueba {
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
-        //la fecha me llega como yyyy-mm-dd
-        //fechaAbertura=new SimpleDateFormat("yyyy/MM/dd").parse("2023/03/20");
+        //la fecha me llega como yyyy-mm-dd así que ese es el formato que uso para el parse
 
         //entity
         EmpresaEntity empresa = empresaDao.findById(idModEmpresa);
