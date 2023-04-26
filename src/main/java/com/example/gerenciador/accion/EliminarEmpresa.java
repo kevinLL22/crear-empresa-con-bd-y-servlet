@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import javax.persistence.EntityManager;
 import java.io.IOException;
 
-public class EliminarEmpresa {
+public class EliminarEmpresa implements Accion{
 
     public String ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         EntityManager em = FactoryEmpresa.entityManager();

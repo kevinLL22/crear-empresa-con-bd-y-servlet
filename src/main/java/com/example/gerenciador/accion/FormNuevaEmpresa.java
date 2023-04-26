@@ -6,7 +6,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-public class FormNuevaEmpresa {
+public class FormNuevaEmpresa implements Accion{
     public String ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         return "forward:formNuevaEmpresa.jsp";
     }

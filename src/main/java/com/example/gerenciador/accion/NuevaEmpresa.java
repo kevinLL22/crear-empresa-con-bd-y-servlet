@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import javax.persistence.EntityManager;
 import java.io.IOException;
 
-public class NuevaEmpresa {
+public class NuevaEmpresa implements Accion{
     public String ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         /*Con el HttpServletRequest obtenemos respuestas del navegador

@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import javax.persistence.EntityManager;
 import java.io.IOException;
 
-public class BuscarEmpresa {
+public class BuscarEmpresa implements Accion{
     public String ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //obtenemos los parametros del formulario a partir del nombre de este
         int idEmpresa = Integer.parseInt(request.getParameter("idEmpresa"));

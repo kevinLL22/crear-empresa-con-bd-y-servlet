@@ -13,7 +13,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class ModificarEmpresa {
+public class ModificarEmpresa implements Accion{
     public String ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         EntityManager em = FactoryEmpresa.entityManager();

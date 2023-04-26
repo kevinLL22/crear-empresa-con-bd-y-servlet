@@ -6,16 +6,32 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
+import java.lang.reflect.Constructor;
 
 @WebServlet(name = "ServletEntrada", value = "/entrada")
 public class ServletEntrada extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String urlResult = null;
+        //String urlResult = null;
         String paramAcccion = request.getParameter("accion");
 
-        if(paramAcccion.equals("ListarEmpresas")){
+        String nombreClase = "com.example.gerenciador.accion."+paramAcccion;
+        Class clase = null;
+        Accion accion = null;
+        try {
+            clase = Class.forName(nombreClase);
+            //Constructor <?> constructor = clase.getDeclaredConstructor();
+            //Object objeto = constructor.newInstance();  <-- alternativa a "clase.newInstance"
+            accion = (Accion) clase.newInstance();
+        } catch (ClassNotFoundException |InstantiationException | IllegalAccessException  e) {
+            throw new RuntimeException(e);
+        }
+
+        String urlResult = accion.ejecutar(request,response);
+
+
+        /*if(paramAcccion.equals("ListarEmpresas")){
             ListarEmpresas accion = new ListarEmpresas();
             urlResult = accion.ejecutar(request,response);
 
@@ -38,7 +54,7 @@ public class ServletEntrada extends HttpServlet {
         } else if (paramAcccion.equals("FormNuevaEmpresa")) {
             FormNuevaEmpresa formNuevaEmpresa = new FormNuevaEmpresa();
             urlResult = formNuevaEmpresa.ejecutar(request,response);
-        }
+        }*/
 
         String[] tipoDireccion = urlResult.split(":");
         if (tipoDireccion[0].equals("forward")){
@@ -52,6 +68,7 @@ public class ServletEntrada extends HttpServlet {
 
         }
 
+        //Forward = vamos a un jsp   redirect = llamamos a otra acción, otra petición
 
     }
 

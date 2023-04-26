@@ -12,7 +12,8 @@ import javax.persistence.EntityManager;
 import java.io.IOException;
 import java.util.List;
 
-public class ListarEmpresas {
+public class ListarEmpresas implements Accion{
+
     public String ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         EntityManager em = FactoryEmpresa.entityManager();
         EmpresaDao empresaDao = new EmpresaDao(em);
