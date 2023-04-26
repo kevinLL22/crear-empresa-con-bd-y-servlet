@@ -11,14 +11,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10b75583-465e-436f-9124-7af8810b41c2" name="Changes" comment="Modificando rutas url, ahora las clases devuelven una ruta y es el controlador el que devuelve otro método o un jsp">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/FormNuevaEmpresa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/BuscarEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/BuscarEmpresa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/EliminarEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/EliminarEmpresa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/ListarEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/ListarEmpresas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/ModificarEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/ModificarEmpresa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/NuevaEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/NuevaEmpresa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/ServletEntrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/ServletEntrada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/formNuevaEmpresa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/formNuevaEmpresa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/formNuevaEmpresa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/formNuevaEmpresa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/listaEmpresas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/listaEmpresas.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/modificarEmpresa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/modificarEmpresa.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/nuevaEmpresaRegistrada.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/nuevaEmpresaRegistrada.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +100,7 @@
       <recent name="com.example.gerenciador.servlet" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\banll\Documents\udemy\springCurso\workspace\gerenciador\src\main\webapp\WEB-INF\jsp" />
       <recent name="C:\Users\banll\Documents\udemy\springCurso\workspace\gerenciador\src\main\webapp" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
@@ -240,7 +245,7 @@
       <workItem from="1682366890833" duration="372000" />
       <workItem from="1682452498628" duration="291000" />
       <workItem from="1682455241716" duration="7235000" />
-      <workItem from="1682474114630" duration="1688000" />
+      <workItem from="1682474114630" duration="4384000" />
     </task>
     <task id="LOCAL-00001" summary="Agregando jstl a los html">
       <created>1681952757978</created>
@@ -284,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682474559438</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Modificando rutas url, ahora las clases devuelven una ruta y es el controlador el que devuelve otro método o un jsp">
+      <created>1682475817303</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682475817303</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

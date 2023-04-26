@@ -32,13 +32,18 @@ public class ServletEntrada extends HttpServlet {
             urlResult = modificarEmpresa.ejecutar(request,response);
 
         } else if (paramAcccion.equals("NuevaEmpresa")) {
-        NuevaEmpresa modificarEmpresa = new NuevaEmpresa();
-            urlResult = modificarEmpresa.ejecutar(request,response);
+            NuevaEmpresa nuevaEmpresa = new NuevaEmpresa();
+            urlResult = nuevaEmpresa.ejecutar(request,response);
+
+        } else if (paramAcccion.equals("FormNuevaEmpresa")) {
+            FormNuevaEmpresa formNuevaEmpresa = new FormNuevaEmpresa();
+            urlResult = formNuevaEmpresa.ejecutar(request,response);
         }
+
         String[] tipoDireccion = urlResult.split(":");
         if (tipoDireccion[0].equals("forward")){
             //llamar al jsp con el dispacher
-            RequestDispatcher rd = request.getRequestDispatcher(tipoDireccion[1]);
+            RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/view/"+tipoDireccion[1]);
             //enviamos el request y response al jsp
             rd.forward(request,response);
         }else {

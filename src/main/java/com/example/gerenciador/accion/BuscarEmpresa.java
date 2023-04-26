@@ -26,7 +26,7 @@ public class BuscarEmpresa {
         //podemos pasar, como string, la entidad
         request.setAttribute("empresa",empresa);
         em.close();
-        return "forward:/modificarEmpresa.jsp";
+        return "forward:modificarEmpresa.jsp";
     }
 
 }

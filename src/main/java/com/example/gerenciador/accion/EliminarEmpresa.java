@@ -19,7 +19,7 @@ public class EliminarEmpresa {
         EmpresaEntity eliminarEste = empresaDao.findById(id);
         empresaDao.delete(eliminarEste);
         em.close();
-        return "redirect:/entrada?accion=ListarEmpresas";
+        return "redirect:entrada?accion=ListarEmpresas";
     }
 
 }

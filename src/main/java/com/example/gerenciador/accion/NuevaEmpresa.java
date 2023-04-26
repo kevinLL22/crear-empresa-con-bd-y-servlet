@@ -25,7 +25,7 @@ public class NuevaEmpresa {
         empresaDao.save(empresa);
         em.close();
 
-        return "forward:/entrada?accion=ListarEmpresas";
+        return "redirect:entrada?accion=ListarEmpresas";
     }
 
 }
