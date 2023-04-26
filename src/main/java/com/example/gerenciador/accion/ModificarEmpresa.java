@@ -1,11 +1,11 @@
-package com.example.gerenciador.servlet;
+package com.example.gerenciador.accion;
 
 import com.example.gerenciador.dao.EmpresaDao;
 import com.example.gerenciador.factory.FactoryEmpresa;
 import com.example.gerenciador.modelo.EmpresaEntity;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import javax.persistence.EntityManager;
 import java.io.IOException;
@@ -13,12 +13,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@WebServlet(name = "ModificarEmpresaServlet", value = "/modEmpresa")
-public class ModificarEmpresaServlet extends HttpServlet {
+public class ModificarEmpresa {
+    public void ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         EntityManager em = FactoryEmpresa.entityManager();
         EmpresaDao empresaDao = new EmpresaDao(em);
         //getters
@@ -40,4 +37,5 @@ public class ModificarEmpresaServlet extends HttpServlet {
         em.close();
         response.sendRedirect("ListaEmpresasServlet");
     }
+
 }

@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<c:url value="/eliminarEmpresa" var="eliminarEmpresa"/>
-<c:url value="/buscarEmpresa" var="buscarEmpresa"/>
+<c:url value="/entrada?accion=EliminarEmpresa" var="eliminarEmpresa"/>
+<c:url value="/entrada?accion=BuscarEmpresa" var="buscarEmpresa"/>
 
 <html>
 <head>
@@ -23,7 +23,7 @@
                         <input type="hidden" name="idEmpresaEliminar" value="${empresa.id}">
                         <button type="submit">Eliminar</button>
                     </form>
-                <form action="${buscarEmpresa}" method="get">
+                <form action="${buscarEmpresa}" method="post">
                     <input type="hidden" name="idEmpresa" value="${empresa.id}">
                     <button type="submit">modificar</button>
                 </form>

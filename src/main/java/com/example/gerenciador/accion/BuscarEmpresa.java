@@ -1,19 +1,17 @@
-package com.example.gerenciador.servlet;
+package com.example.gerenciador.accion;
 
 import com.example.gerenciador.dao.EmpresaDao;
 import com.example.gerenciador.factory.FactoryEmpresa;
 import com.example.gerenciador.modelo.EmpresaEntity;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
-
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import javax.persistence.EntityManager;
 import java.io.IOException;
 
-@WebServlet(name = "BuscarEmpresaServlet", value = "/buscarEmpresa")
-public class BuscarEmpresaServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+public class BuscarEmpresa {
+    public void ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //obtenemos los parametros del formulario a partir del nombre de este
         int idEmpresa = Integer.parseInt(request.getParameter("idEmpresa"));
 
@@ -29,11 +27,8 @@ public class BuscarEmpresaServlet extends HttpServlet {
         //podemos pasar, como string, la entidad
         request.setAttribute("empresa",empresa);
 
+        em.close();
         requestDispatcher.forward(request,response);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
 }

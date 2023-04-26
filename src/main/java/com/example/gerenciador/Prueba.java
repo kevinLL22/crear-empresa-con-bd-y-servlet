@@ -28,7 +28,7 @@ public class Prueba {
         EntityManager em = FactoryEmpresa.entityManager();
         EmpresaDao empresaDao = new EmpresaDao(em);
 
-        //getters
+
         Integer idModEmpresa = 4;
         String nombre = "mod 4";
         Date fechaAbertura= null;
