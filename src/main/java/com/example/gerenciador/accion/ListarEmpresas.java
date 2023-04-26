@@ -20,6 +20,6 @@ public class ListarEmpresas {
         //añadimos al request un parametro, para poder mandarlo después junto al request
         request.setAttribute("empresasList", empresasList);
         em.close();
-        return "/listaEmpresas.jsp";
+        return "forward:/listaEmpresas.jsp";
     }
 }

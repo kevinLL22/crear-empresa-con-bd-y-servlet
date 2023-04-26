@@ -11,7 +11,7 @@ import javax.persistence.EntityManager;
 import java.io.IOException;
 
 public class NuevaEmpresa {
-    public void ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public String ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         /*Con el HttpServletRequest obtenemos respuestas del navegador
         con el HttpServletResponse devolvemos un html al navegador
@@ -25,8 +25,7 @@ public class NuevaEmpresa {
         empresaDao.save(empresa);
         em.close();
 
-        //Al contrario que con el dispacher, ahora le decimos al navegador que vaya a esta otra dirección
-        response.sendRedirect("/gerenciador/entrada?accion=ListarEmpresas");
+        return "forward:/entrada?accion=ListarEmpresas";
     }
 
 }

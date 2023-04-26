@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ModificarEmpresa {
-    public void ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public String ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         EntityManager em = FactoryEmpresa.entityManager();
         EmpresaDao empresaDao = new EmpresaDao(em);
@@ -35,7 +35,7 @@ public class ModificarEmpresa {
         empresa.setFechaAbertura(fechaAbertura);
         empresaDao.update(empresa);
         em.close();
-        response.sendRedirect("ListaEmpresasServlet");
+        return "redirect:entrada?accion=ListarEmpresas";
     }
 
 }

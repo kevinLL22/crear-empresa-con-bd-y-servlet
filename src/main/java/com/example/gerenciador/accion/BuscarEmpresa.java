@@ -11,7 +11,7 @@ import javax.persistence.EntityManager;
 import java.io.IOException;
 
 public class BuscarEmpresa {
-    public void ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public String ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //obtenemos los parametros del formulario a partir del nombre de este
         int idEmpresa = Integer.parseInt(request.getParameter("idEmpresa"));
 
@@ -23,12 +23,10 @@ public class BuscarEmpresa {
 
         EmpresaEntity empresa = empresaDao.findById(idEmpresa);
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/modificarEmpresa.jsp");
         //podemos pasar, como string, la entidad
         request.setAttribute("empresa",empresa);
-
         em.close();
-        requestDispatcher.forward(request,response);
+        return "forward:/modificarEmpresa.jsp";
     }
 
 }

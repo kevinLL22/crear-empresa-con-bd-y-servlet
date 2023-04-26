@@ -12,14 +12,14 @@ import java.io.IOException;
 
 public class EliminarEmpresa {
 
-    public void ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public String ejecutar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         EntityManager em = FactoryEmpresa.entityManager();
         EmpresaDao empresaDao = new EmpresaDao(em);
         Integer id = Integer.parseInt(request.getParameter("idEmpresaEliminar"));
         EmpresaEntity eliminarEste = empresaDao.findById(id);
         empresaDao.delete(eliminarEste);
         em.close();
-        response.sendRedirect("/gerenciador/entrada?accion=ListarEmpresas");
+        return "redirect:/entrada?accion=ListarEmpresas";
     }
 
 }

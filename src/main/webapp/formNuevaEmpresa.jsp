@@ -9,7 +9,7 @@
 <body>
 
     <form action="${linkServletNuevaEmpresa}" method="post">
-        nueva empresa Entity
+        nueva empresa
         <input type="text" name="nombre"/>
         <input type="submit"/>
     </form>

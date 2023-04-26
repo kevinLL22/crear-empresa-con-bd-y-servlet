@@ -21,25 +21,32 @@ public class ServletEntrada extends HttpServlet {
 
         } else if (paramAcccion.equals("EliminarEmpresa")) {
             EliminarEmpresa eliminarEmpresa = new EliminarEmpresa();
-            eliminarEmpresa.ejecutar(request,response);
+            urlResult = eliminarEmpresa.ejecutar(request,response);
 
         }else if (paramAcccion.equals("BuscarEmpresa")) {
             BuscarEmpresa buscarEmpresa = new BuscarEmpresa();
-            buscarEmpresa.ejecutar(request,response);
+            urlResult = buscarEmpresa.ejecutar(request,response);
 
         }else if (paramAcccion.equals("ModificarEmpresa")) {
             ModificarEmpresa modificarEmpresa = new ModificarEmpresa();
-            modificarEmpresa.ejecutar(request,response);
+            urlResult = modificarEmpresa.ejecutar(request,response);
 
         } else if (paramAcccion.equals("NuevaEmpresa")) {
         NuevaEmpresa modificarEmpresa = new NuevaEmpresa();
-        modificarEmpresa.ejecutar(request,response);
+            urlResult = modificarEmpresa.ejecutar(request,response);
+        }
+        String[] tipoDireccion = urlResult.split(":");
+        if (tipoDireccion[0].equals("forward")){
+            //llamar al jsp con el dispacher
+            RequestDispatcher rd = request.getRequestDispatcher(tipoDireccion[1]);
+            //enviamos el request y response al jsp
+            rd.forward(request,response);
+        }else {
+            //Al contrario que con el dispacher, ahora le decimos al navegador que vaya a esta otra dirección
+            response.sendRedirect("/gerenciador/"+tipoDireccion[1]);
+
         }
 
-        //llamar al jsp con el dispacher
-        RequestDispatcher rd = request.getRequestDispatcher(urlResult);
-        //enviamos el request y response al jsp
-        rd.forward(request,response);
 
     }
 
