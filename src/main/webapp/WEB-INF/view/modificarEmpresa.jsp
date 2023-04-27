@@ -8,6 +8,7 @@
     <title>Modificar empresa</title>
 </head>
 <body>
+<c:import url="logout-parcial.jsp"></c:import>
 
   <form action="${modEmpresa}" method="post">
     modificar empresa:

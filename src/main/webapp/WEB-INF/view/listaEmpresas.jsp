@@ -8,6 +8,9 @@
     <title>Lista de empresas</title>
 </head>
 <body>
+    <c:import url="logout-parcial.jsp"></c:import>
+    <p>Usuario logeado: ${usuario.login}</p>
+
     <c:if test="${ not empty nombre }">
         <h3>Nueva empresa registrtada</h3>
         <p>Empresa ${ nombre } registrada</p>

@@ -12,9 +12,16 @@ import java.lang.reflect.Constructor;
 public class ServletEntrada extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        //String urlResult = null;
+        HttpSession session = request.getSession();
         String paramAcccion = request.getParameter("accion");
+
+        boolean noLogeado = (session.getAttribute("usuario") == null);
+        boolean NoEstaProtegido = !(paramAcccion.equals("LoginUsuario")||paramAcccion.equals("FormUsuario"));
+
+        if (noLogeado && NoEstaProtegido){
+            response.sendRedirect("/gerenciador/entrada?accion=LoginUsuario");
+            return;
+        }
 
         String nombreClase = "com.example.gerenciador.accion."+paramAcccion;
         Class clase = null;
@@ -29,8 +36,13 @@ public class ServletEntrada extends HttpServlet {
         }
 
         String urlResult = accion.ejecutar(request,response);
-
-
+        String[] tipoDireccion = urlResult.split(":");
+        if (tipoDireccion[0].equals("forward")){
+            RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/view/"+tipoDireccion[1]);//llamar al jsp con el dispacher
+            rd.forward(request,response);//enviamos el request y response al jsp
+        }else {
+            response.sendRedirect("/gerenciador/"+tipoDireccion[1]);//Al contrario que con el dispacher, ahora le decimos al navegador que vaya a esta otra dirección
+        }
         /*if(paramAcccion.equals("ListarEmpresas")){
             ListarEmpresas accion = new ListarEmpresas();
             urlResult = accion.ejecutar(request,response);
@@ -55,21 +67,7 @@ public class ServletEntrada extends HttpServlet {
             FormNuevaEmpresa formNuevaEmpresa = new FormNuevaEmpresa();
             urlResult = formNuevaEmpresa.ejecutar(request,response);
         }*/
-
-        String[] tipoDireccion = urlResult.split(":");
-        if (tipoDireccion[0].equals("forward")){
-            //llamar al jsp con el dispacher
-            RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/view/"+tipoDireccion[1]);
-            //enviamos el request y response al jsp
-            rd.forward(request,response);
-        }else {
-            //Al contrario que con el dispacher, ahora le decimos al navegador que vaya a esta otra dirección
-            response.sendRedirect("/gerenciador/"+tipoDireccion[1]);
-
-        }
-
         //Forward = vamos a un jsp   redirect = llamamos a otra acción, otra petición
-
     }
 
 }

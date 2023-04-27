@@ -9,7 +9,6 @@
     <title>Login</title>
 </head>
 <body>
-
     <form action="${linkLogin}" method="post">
         <h3>nuevo usuario</h3>
         <label>Login</label>
