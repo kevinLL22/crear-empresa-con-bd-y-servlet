@@ -10,17 +10,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10b75583-465e-436f-9124-7af8810b41c2" name="Changes" comment="Modificando se agrego clase para el form y se conecto l servlet, se modifico NuevaEmpresa.class es redirect">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/Accion.java" afterDir="false" />
+    <list default="true" id="10b75583-465e-436f-9124-7af8810b41c2" name="Changes" comment="logica para login, incluyendo formulario y demás clases,dao modificado para devolver un usuario existente">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/FormUsuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/LoginUsuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/dao/UsuarioDao.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/modelo/UsuarioEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/formLogin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/BuscarEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/BuscarEmpresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/EliminarEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/EliminarEmpresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/FormNuevaEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/FormNuevaEmpresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/ListarEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/ListarEmpresas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/ModificarEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/ModificarEmpresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/NuevaEmpresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/NuevaEmpresa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/ServletEntrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/ServletEntrada.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +72,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/banll/IdeaProjects/CatApi&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/banll/Documents/udemy/springCurso/workspace/gerenciador/src/main/webapp/WEB-INF/view&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -97,6 +93,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.gerenciador.servlet" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\banll\Documents\udemy\springCurso\workspace\gerenciador\src\main\webapp\WEB-INF\view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\banll\Documents\udemy\springCurso\workspace\gerenciador\src\main\webapp\WEB-INF\jsp" />
@@ -246,7 +245,8 @@
       <workItem from="1682455241716" duration="7235000" />
       <workItem from="1682474114630" duration="4841000" />
       <workItem from="1682531040625" duration="1218000" />
-      <workItem from="1682532272611" duration="4122000" />
+      <workItem from="1682532272611" duration="9251000" />
+      <workItem from="1682560255936" duration="3455000" />
     </task>
     <task id="LOCAL-00001" summary="Agregando jstl a los html">
       <created>1681952757978</created>
@@ -304,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682484872105</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="se modifico el servlet siguiento el Design Pattern Command, ahora se crean las clases apartir un string">
+      <created>1682541709187</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682541709187</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,6 +337,8 @@
     <MESSAGE value="Modificando servlet, ahora solo será un solo servlet, se agregaron clases con la logica de los servlets" />
     <MESSAGE value="Modificando rutas url, ahora las clases devuelven una ruta y es el controlador el que devuelve otro método o un jsp" />
     <MESSAGE value="Modificando se agrego clase para el form y se conecto l servlet, se modifico NuevaEmpresa.class es redirect" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificando se agrego clase para el form y se conecto l servlet, se modifico NuevaEmpresa.class es redirect" />
+    <MESSAGE value="se modifico el servlet siguiento el Design Pattern Command, ahora se crean las clases apartir un string" />
+    <MESSAGE value="logica para login, incluyendo formulario y demás clases,dao modificado para devolver un usuario existente" />
+    <option name="LAST_COMMIT_MESSAGE" value="logica para login, incluyendo formulario y demás clases,dao modificado para devolver un usuario existente" />
   </component>
 </project>
