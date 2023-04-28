@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="gerenciador:war" />
       <artifact name="gerenciador:war exploded" />
     </artifacts-to-build>
   </component>
@@ -9,19 +10,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10b75583-465e-436f-9124-7af8810b41c2" name="Changes" comment="logica para login, incluyendo formulario y demás clases,dao modificado para devolver un usuario existente">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/LogoutUsuario.java" afterDir="false" />
+    <list default="true" id="10b75583-465e-436f-9124-7af8810b41c2" name="Changes" comment="logica para logout, incluyendo clases y mod jsp">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/AutorizacionFilter.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/MonitoreoFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/logout-parcial.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/ListarEmpresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/ListarEmpresas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/LoginUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/accion/LoginUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/ServletEntrada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/ServletEntrada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/formLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/formLogin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/formNuevaEmpresa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/formNuevaEmpresa.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/listaEmpresas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/listaEmpresas.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/modificarEmpresa.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/modificarEmpresa.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/nuevaEmpresaRegistrada.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/nuevaEmpresaRegistrada.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +246,9 @@
       <workItem from="1682532272611" duration="9251000" />
       <workItem from="1682560255936" duration="4068000" />
       <workItem from="1682569676394" duration="1776000" />
-      <workItem from="1682621882820" duration="8293000" />
+      <workItem from="1682621882820" duration="8866000" />
+      <workItem from="1682649940160" duration="2475000" />
+      <workItem from="1682701175200" duration="647000" />
     </task>
     <task id="LOCAL-00001" summary="Agregando jstl a los html">
       <created>1681952757978</created>
@@ -325,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682565383280</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="logica para logout, incluyendo clases y mod jsp">
+      <created>1682637330522</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1682637330522</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,6 +355,7 @@
     <MESSAGE value="Modificando se agrego clase para el form y se conecto l servlet, se modifico NuevaEmpresa.class es redirect" />
     <MESSAGE value="se modifico el servlet siguiento el Design Pattern Command, ahora se crean las clases apartir un string" />
     <MESSAGE value="logica para login, incluyendo formulario y demás clases,dao modificado para devolver un usuario existente" />
-    <option name="LAST_COMMIT_MESSAGE" value="logica para login, incluyendo formulario y demás clases,dao modificado para devolver un usuario existente" />
+    <MESSAGE value="logica para logout, incluyendo clases y mod jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="logica para logout, incluyendo clases y mod jsp" />
   </component>
 </project>
