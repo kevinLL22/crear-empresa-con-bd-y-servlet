@@ -10,11 +10,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10b75583-465e-436f-9124-7af8810b41c2" name="Changes" comment="logica para logout, incluyendo clases y mod jsp">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/AutorizacionFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/MonitoreoFilter.java" afterDir="false" />
+    <list default="true" id="10b75583-465e-436f-9124-7af8810b41c2" name="Changes" comment="Adding filters">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/gerenciador/servlet/EmpresasServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +246,8 @@
       <workItem from="1682569676394" duration="1776000" />
       <workItem from="1682621882820" duration="8866000" />
       <workItem from="1682649940160" duration="2475000" />
-      <workItem from="1682701175200" duration="647000" />
+      <workItem from="1682701175200" duration="4662000" />
+      <workItem from="1682723459080" duration="673000" />
     </task>
     <task id="LOCAL-00001" summary="Agregando jstl a los html">
       <created>1681952757978</created>
@@ -327,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682637330522</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Adding filters">
+      <created>1682702352348</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1682702352348</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,6 +362,7 @@
     <MESSAGE value="se modifico el servlet siguiento el Design Pattern Command, ahora se crean las clases apartir un string" />
     <MESSAGE value="logica para login, incluyendo formulario y demás clases,dao modificado para devolver un usuario existente" />
     <MESSAGE value="logica para logout, incluyendo clases y mod jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="logica para logout, incluyendo clases y mod jsp" />
+    <MESSAGE value="Adding filters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding filters" />
   </component>
 </project>
